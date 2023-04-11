@@ -1,10 +1,11 @@
 #include <iostream>
+#include <string>
 #include <cctype>
 
 int	main(int ac, char **av)
 {
 	int		i, ii;
-	char	c;
+	std::string	str;
 
 	if (ac == 1)
 	{
@@ -14,10 +15,11 @@ int	main(int ac, char **av)
 	for (i = 1; i < ac; i++)
 	{
 		ii = 0;
-		while (av[i][ii])
+		str = av[i];
+		while (str[ii] != *str.end())
 		{
-			c = toupper(av[i][ii]);
-			std::cout << c;
+			str[ii] = toupper(str[ii]);
+			std::cout << str[ii];
 			ii++;
 		}
 	}
