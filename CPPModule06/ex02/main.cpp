@@ -9,7 +9,8 @@
 // Dynamic cast est utilisé pour performer des conversions entre classe héritante et classe de base de façon sécuritaire
 // Le cast se fait durant le runtime et non le temps de compilation.
 
-Base	*generate(void){
+Base	*generate(void)
+{
 	srand(time(NULL));
 	int	res;
 	Base	*base;
@@ -34,7 +35,8 @@ Base	*generate(void){
 	return base;
 }
 
-void	identify(Base *p){
+void	identify(Base *p)
+{
 	std::cout << "Identify ptr" << std::endl;
 	if (dynamic_cast<A*>(p))
 		std::cout << "A" << std::endl;
@@ -44,29 +46,34 @@ void	identify(Base *p){
 		std::cout << "C" << std::endl;
 }
 
-void	identify(Base &p){
+void	identify(Base &p)
+{
 	A a;
 	B b;
 	C c;
 	std::cout << "Identify reference" << std::endl;
-	try{
+	try
+    {
 		a = dynamic_cast<A&>(p);
 		std::cout << "A" << std::endl;
 	}
 	catch(std::exception &e){}
-	try{
+	try
+    {
 		b = dynamic_cast<B&>(p);
 		std::cout << "B" << std::endl;
 	}
 	catch(std::exception &e){}
-	try{
+	try
+    {
 		 c = dynamic_cast<C&>(p);
 		std::cout << "C" << std::endl;
 	}
 	catch(std::exception &e){}
 }
 
-int main(void){
+int main(void)
+{
 	Base	*base;
 
 	base = generate();

@@ -3,8 +3,8 @@
 
 // Static cast: Fait une conversion implicite entre deux types de data (exemple transforme un int en char, float en int, etc);
 // Conversion simple qui est fait au temps de compilation
-int	main(int ac, char **av){
-	(void)ac;
+int	main(int ac, char **av)
+{
 	Converter a;
 	Converter b;
 	if (ac != 2)
@@ -16,7 +16,8 @@ int	main(int ac, char **av){
 	a.setTypes(var);
 	Converter c(a);
 	b = a;
-	std::cout << a << std::endl;
+	
+    std::cout << a << std::endl;
 	std::cout << b << std::endl;
 	std::cout << c;
 	return (0);

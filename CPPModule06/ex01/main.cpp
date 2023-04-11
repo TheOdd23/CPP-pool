@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
 
-typedef struct s_Data{
+typedef struct s_Data
+{
 	int			i;
 	float		f;
 	double		d;
@@ -15,11 +16,13 @@ typedef struct s_Data{
 // uintptr_t est "an unsigned integer type with the property that any valid pointer to void can be converted to
 // this type, then converted back to pointer to void, and the result will compare equal to the original pointer"
 
-uintptr_t serialize(Data *ptr){
+uintptr_t serialize(Data *ptr)
+{
 	return reinterpret_cast<uintptr_t>(ptr);
 }
 
-Data *deserialize(uintptr_t raw){
+Data *deserialize(uintptr_t raw)
+{
 	return reinterpret_cast<Data *>(raw);
 }
 

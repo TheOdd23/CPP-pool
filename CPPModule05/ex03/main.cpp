@@ -15,7 +15,8 @@ int	main(void)
 	AForm	*c;
 	AForm	*d;
 	std::cout << std::endl;
-	b = a.makeForm("berry creation", "Jardin");
+	
+    b = a.makeForm("berry creation", "Jardin");
 	std::cout << std::endl;
 	c = a.makeForm("resident pardon", "Satan");
 	std::cout << std::endl;
@@ -26,7 +27,8 @@ int	main(void)
 	c = a.makeForm("presidential pardon", "Satan");
 	std::cout << std::endl;
 	d = a.makeForm("robotomy request", "R2D2");
-	std::cout << std::endl;
+	
+    std::cout << std::endl;
 	std::cout << std::endl;
 	
 	z.signForm(*b);
@@ -43,7 +45,8 @@ int	main(void)
 	std::cout << std::endl;
 	z.executeForm(*d);
 	std::cout << std::endl;
-	delete b;
+	
+    delete b;
 	delete c;
 	delete d;
 	return (0);
