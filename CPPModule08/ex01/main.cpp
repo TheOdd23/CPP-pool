@@ -16,46 +16,61 @@ int main()
 	sd.addNumber(3);
 	sd.addNumber(3);
 	Span se(sp);
-	try{
+	
+    try
+    {
 		sa.numGenerator(10000);
 	}
-	catch(std::exception &e){
+	catch(std::exception &e)
+    {
 		std::cout << e.what() << std::endl;
 	}
-	try{
+	try
+    {
 		sa.numGenerator(1);
 	}
-	catch(std::exception &e){
+	catch(std::exception &e)
+    {
 		std::cout << e.what() << std::endl;
 	}
-	try{
+	try
+    {
 		std::cout << sa.longestSpan() << std::endl;
 	}
-	catch(std::exception &e){
+	catch(std::exception &e)
+    {
 		std::cout << e.what() << std::endl;
 	}
-	try{
+	try
+    {
 		sb.longestSpan();
 	}
-	catch(std::exception &e){
+	catch(std::exception &e)
+    {
 		std::cout << e.what() << std::endl;
 	}
-	try{
+	try
+    {
 		sc.shortestSpan();
 	}
-	catch(std::exception &e){
+	catch(std::exception &e)
+    {
 		std::cout << e.what() << std::endl;
 	}
-	try{
+	try
+    {
 		sd.shortestSpan();
 	}
-	catch(std::exception &e){
+	catch(std::exception &e)
+    {
 		std::cout << e.what() << std::endl;
 	}
-	try{
+	try
+    {
 		sd.longestSpan();
 	}
-	catch(std::exception &e){
+	catch(std::exception &e)
+    {
 		std::cout << e.what() << std::endl;
 	}
 	std::cout << sp.shortestSpan() << std::endl;

@@ -76,23 +76,28 @@ int main()
 	vstack.push('4');
 	for(char c = 'a'; c <= 'z'; c++)
 		mstack.push(c);
-	for(it = mstack.begin(); it != mstack.end(); it++)
+	
+    for(it = mstack.begin(); it != mstack.end(); it++)
 	{
 		if (*it == 'g')
 			std::cout << *it << " was found!" << std::endl;
 	}
-	for(it = mstack.begin(); it != mstack.end(); it++)
+	
+    for(it = mstack.begin(); it != mstack.end(); it++)
 	{
 		if (*it == '0')
 			std::cout << *it << " was found!" << std::endl;
 	}
-	it = mstack.end() - 1;
+	
+    it = mstack.end() - 1;
 	std::cout << *it << std::endl;
 	std::cout << mstack.top() << std::endl;
-	sstack = mstack;
+	
+    sstack = mstack;
 	std::cout << sstack.size() << std::endl;
 	std::cout << mstack.size() << std::endl;
-	mstack.swap(vstack);
+	
+    mstack.swap(vstack);
 	it = mstack.begin();
 	std::cout << *it << std::endl;
 }

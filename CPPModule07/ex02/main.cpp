@@ -1,6 +1,7 @@
 #include "Array.hpp"
 
-int main(void){
+int main(void)
+{
     Array<int> num(6);
     Array<std::string> str(2);
     str[0] = "Salut";
@@ -9,30 +10,37 @@ int main(void){
     int *a = new int(9);
     unsigned int i;
 
-    for (i = 0; i < 9; i++){
+    for (i = 0; i < 9; i++)
+    {
         a[i] = rand();
     }
-    for (i = 0; i < num.size(); i++){
+    for (i = 0; i < num.size(); i++)
+    {
         num[i] = rand();
     }
-    try{
+    try
+    {
         num[21] = a[1];
     }
-    catch (std::exception &e){
+    catch (std::exception &e)
+    {
         std::cout << e.what() << std::endl;
     }
     num[1] = a[4];
     std::cout <<std::endl;
+    
     std::cout << "a[4]: " << a[4] << " num[1]: " << num[1] << std::endl;
     if (num[1] == a[4])
         std::cout << "num[1] et a[4] sont égaux" << std::endl;
     std::cout <<std::endl;
+    
     std::cout << "a[4]: " << a[4] << " num[2]: " << num[2] << std::endl;
     if (num[2] == a[4])
         std::cout << "num[2] et a[4] sont égaux" << std::endl;
     else
         std::cout << "num[2] et a[4] ne sont pas égaux" << std::endl;
     std::cout <<std::endl;
+    
     std::cout << "str[0]: " << str[0] << " str2[0]: " << str2[0] << std::endl;
     str[0] = "Bye bye";
     str[1] = "et a la prochaine";
@@ -40,10 +48,13 @@ int main(void){
     a[0] = 42;
     str2[1] = a[0];
     std::cout <<std::endl;
+    
     std::cout << "str2[1]: " << str2[1] << " a[0]: " << a[0] << std::endl;
     std::cout <<std::endl;
+    
     std::cout << "size de num:" << num.size() << std::endl;
     std::cout <<std::endl;
+    
     for (i = 0; i < num.size(); i++)
         std::cout << "num[" << i << "] " << num[i] << std::endl;
     delete a;

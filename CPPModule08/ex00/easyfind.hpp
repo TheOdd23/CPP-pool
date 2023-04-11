@@ -10,11 +10,14 @@
 #include <iterator>
 
 
-template <typename T> typename T::iterator easyfind(T &cont, int val){
+template <typename T> typename T::iterator easyfind(T &cont, int val)
+{
 	typename T::iterator look;
-	class UnFound: public std::exception{
+	class UnFound: public std::exception
+    {
 		public:
-			virtual const char *what() const throw(){
+			virtual const char *what() const throw()
+            {
 				return "Error: Not found";
 			}
 	};
